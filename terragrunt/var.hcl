@@ -1,4 +1,4 @@
 locals {
   # Automatically load local variables
-    resource_group = "ml-test"
+    resource_group = "nabk-ml-test"
 }

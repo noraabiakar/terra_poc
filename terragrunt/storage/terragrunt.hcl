@@ -7,12 +7,12 @@ locals {
 }
 
 terraform {
-  source = "../../terraform"
+  source = "../..//terraform/storage"
 }
 
 inputs = {
   resource_group_name   = local.standard_vars.locals.resource_group
   location              = "West Europe"
   name                  = "tutorial"
-  stage                 = "dev
+  stage                 = "dev"
 }

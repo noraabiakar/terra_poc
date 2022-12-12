@@ -7,12 +7,13 @@ locals {
 }
 
 terraform {
-  source = "../../terraform"
+  source = "../..//terraform/azureml"
 }
 
 dependency "storage" {
   config_path = "../storage"
 }
+
 dependency "keyvault" {
   config_path = "../keyvault"
 }
@@ -28,9 +29,9 @@ dependencies {
 
 inputs = {
   resource_group_name   = local.standard_vars.locals.resource_group
-  storage_account_id    = dependency.storage.outputs.storage_id
-  key_vault_id          = dependency.keyvault.outputs.key_vault_id
-  app_insights_id       = dependency.appinsights.outputs.appinsights_id
+  storage_account_id    = dependency.storage.output.storage_id
+  key_vault_id          = dependency.keyvault.output.key_vault_id
+  app_insights_id       = dependency.appinsights.output.appinsights_id
   location              = "West Europe"
   name                  = "tutorial"
   stage                 = "dev"
