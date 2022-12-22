@@ -12,3 +12,10 @@ This repo contains 2 directories:
      source = "git@github.com:noraabiakar/terraform.git//azureml?ref=master"
    }
    ```
+
+To deploy all modules 
+- `terragrunt run-all apply`
+
+To deploy a single module
+- `cd azureml`
+- `terragrunt apply`
